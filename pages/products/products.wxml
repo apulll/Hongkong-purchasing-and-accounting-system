@@ -1,0 +1,16 @@
+<!--pages/orders/orders.wxml-->
+<view>
+<text>商品名称：</text>
+<input class='order-form-field' value="{{name}}"></input>
+<text>商品进价（港币$）：</text>
+<input class='order-form-field' value="{{price_hk}}" bindinput="priceHkChange"></input>
+<text>汇率换算：</text>
+<input class='order-form-field' value="{{rate}}" bindinput="rateChange"></input>
+<text>商品进价换算（人民币￥）：</text>
+<input class='order-form-field' readonly value="{{price_cny}}"></input>
+<text>商品实际出售价格（人民币￥）：</text>
+<input class='order-form-field' value="{{price}}"></input>
+<view>
+    <button  class='product-save'  bindtap='saveProduct' >商品保存</button>
+</view>
+</view>
